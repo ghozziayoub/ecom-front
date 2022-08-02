@@ -9,6 +9,8 @@ import { DashboardComponent } from './components/private/dashboard/dashboard.com
 import { SidebarComponent } from './components/private/shared/sidebar/sidebar.component';
 import { TopbarComponent } from './components/private/shared/topbar/topbar.component';
 import { CategoriesListComponent } from './components/private/categories-list/categories-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsListComponent } from './components/private/products-list/products-list.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { CategoriesListComponent } from './components/private/categories-list/ca
     DashboardComponent,
     SidebarComponent,
     TopbarComponent,
-    CategoriesListComponent
+    CategoriesListComponent,
+    ProductsListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

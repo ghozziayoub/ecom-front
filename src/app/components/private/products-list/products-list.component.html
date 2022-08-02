@@ -20,14 +20,14 @@
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Categories Managament</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Products Managament</h1>
                     </div>
                     <!-- catgories LIST-->
 
                     <div class="row">
                         <div class="col-12 mb-3">
                             <button class="btn btn-sm btn-primary">
-                                <i class="fa fa-plus"></i> add category
+                                <i class="fa fa-plus"></i> add product
                             </button>
                         </div>
                         <div class="col-12">
@@ -35,7 +35,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Categories List</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Products List</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -43,14 +43,21 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
+                                                <th>Image</th>
                                                 <th>Name</th>
+                                                <th>Price</th>
+                                                <th>Description</th>
                                                 <th>#</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr *ngFor="let category of categoriesList;let i = index">
+                                            
+                                            <tr *ngFor="let product of productsList;let i = index">
                                                 <td>{{i}}</td>
-                                                <td>{{category.name}}</td>
+                                                <td><img src="{{product.image}}" width="50px" alt=""></td>
+                                                <td>{{product.name}}</td>
+                                                <td>{{product.price}}</td>
+                                                <td>{{product.description}}</td>
                                                 <td>
                                                     <button class="btn btn-sm btn-warning">
                                                         <i class="fa fa-pen"></i>
@@ -60,6 +67,7 @@
                                                     </button>
                                                 </td>
                                             </tr>
+                                        
                                         </tbody>
                                     </table>
                                 </div>
