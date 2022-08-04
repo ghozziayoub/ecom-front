@@ -34,7 +34,7 @@ export class CategoryAddComponent implements OnInit {
     this.catgeoryService.addcategory(category).subscribe(
       {
         next: (result) => {
-          this.router.navigateByUrl("/categories-list")
+          this.router.navigateByUrl("/categories/list")
         },
         error: (err) => { console.log(err) }
       }
