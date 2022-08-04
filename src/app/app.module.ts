@@ -11,6 +11,9 @@ import { TopbarComponent } from './components/private/shared/topbar/topbar.compo
 import { CategoriesListComponent } from './components/private/categories-list/categories-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsListComponent } from './components/private/products-list/products-list.component';
+import { CategoryAddComponent } from './components/private/category-add/category-add.component';
+import { CategoryUpdateComponent } from './components/private/category-update/category-update.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,15 @@ import { ProductsListComponent } from './components/private/products-list/produc
     TopbarComponent,
     CategoriesListComponent,
     ProductsListComponent,
+    CategoryAddComponent,
+    CategoryUpdateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

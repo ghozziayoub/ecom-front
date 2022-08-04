@@ -24,4 +24,17 @@ export class CategoriesListComponent implements OnInit {
     )
   }
 
+
+  deleteCategory(category: any, index: any) {
+    this.categoriesList.splice(index, 1)
+
+    this.categoriesService.deleteCategory(category._id).subscribe(
+      {
+        next: (result) => { console.log(result) },
+        error: (err) => { console.log(err) }
+      }
+    )
+
+  }
+
 }

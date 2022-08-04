@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriesListComponent } from './components/private/categories-list/categories-list.component';
+import { CategoryAddComponent } from './components/private/category-add/category-add.component';
+import { CategoryUpdateComponent } from './components/private/category-update/category-update.component';
 import { DashboardComponent } from './components/private/dashboard/dashboard.component';
 import { ProductsListComponent } from './components/private/products-list/products-list.component';
 import { HomeComponent } from './components/public/home/home.component';
@@ -18,6 +20,14 @@ const routes: Routes = [
   {
     path: "categories-list",
     component: CategoriesListComponent
+  },
+  {
+    path: "category-add",
+    component: CategoryAddComponent
+  },
+  {
+    path: "category-update/:id",
+    component: CategoryUpdateComponent
   },
   {
     path: "products-list",
