@@ -14,6 +14,8 @@ import { ProductsListComponent } from './components/private/products-list/produc
 import { CategoryAddComponent } from './components/private/category-add/category-add.component';
 import { CategoryUpdateComponent } from './components/private/category-update/category-update.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductAddComponent } from './components/private/product-add/product-add.component';
+import { ProductUpdateComponent } from './components/private/product-update/product-update.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductsListComponent,
     CategoryAddComponent,
     CategoryUpdateComponent,
+    ProductAddComponent,
+    ProductUpdateComponent,
   ],
   imports: [
     BrowserModule,
