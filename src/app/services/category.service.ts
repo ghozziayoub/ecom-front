@@ -16,12 +16,20 @@ export class CategoryService {
     return this.http.get<any>(this.baseCategoriesUrl)
   }
 
-  deleteCategory(id: string) {
-    return this.http.delete<any>("http://localhost:3001/categories/" + id)
+  getCategoryById(id: string) {
+    return this.http.get<any>(`${this.baseCategoriesUrl}/${id}`)
   }
 
-  addcategory(category: Category) {
+  deleteCategory(id: string) {
+    return this.http.delete<any>(`${this.baseCategoriesUrl}/${id}`)
+  }
+
+  addCategory(category: Category) {
     return this.http.post<any>(this.baseCategoriesUrl, category)
+  }
+
+  updateCategory(category: Category) {
+    return this.http.patch<any>(`${this.baseCategoriesUrl}/${category._id}`, category)
   }
 
 
