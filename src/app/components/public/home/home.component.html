@@ -45,8 +45,9 @@
                             <p class="card-text">{{product.price}} DT</p>
                         </div>
                         <div class="card-footer d-grid gap-2">
-                            <button class="btn btn-block btn-primary btn-sm btn-basket">
-                                <i class="fa fa-plus"></i> Ajouter Panier
+                            <button (click)="addToCart(product._id)"
+                                class="btn btn-block btn-primary btn-sm btn-basket">
+                                <i class="fa fa-plus"></i> Add To Cart
                             </button>
                         </div>
                     </div>

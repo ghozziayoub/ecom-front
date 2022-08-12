@@ -11,7 +11,9 @@ export class HomeComponent implements OnInit {
 
   public categoriesList: any[] = []
   public productsList: any[] = []
+
   public allProductsList: any[] = []
+  public cart: any[] = []
 
 
   constructor(private categoriesService: CategoryService, private productSerivce: ProductService) { }
@@ -39,6 +41,25 @@ export class HomeComponent implements OnInit {
     } else {
       this.productsList = this.allProductsList.filter(product => product.idCategory == idCategory)
     }
+  }
+
+  addToCart(id: string) {
+    // add product to local storage
+    // get product by serie
+    let product = this.allProductsList.find((prod) => { return prod._id == id })
+
+    // add product to 
+    let productInCart = this.cart.find((prod) => { return prod._id == id })
+
+    if (productInCart == null) {
+      product.qte = 1
+      this.cart.push(product)
+    } else {
+      let index = this.cart.indexOf(productInCart)
+      this.cart[index].qte++
+    }
+
+    localStorage.setItem('cart', JSON.stringify(this.cart))
   }
 
 }
